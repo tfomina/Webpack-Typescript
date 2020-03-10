@@ -4,15 +4,11 @@ interface PageInterface {
   color: string;
 }
 
-class App extends React.Component<PageInterface, {}> {
-  render() {
-    return (
-      <div>
-        <h1>Welcome to React with Typescript</h1>
-        <p>The color of this page is: {this.props.color}</p>
-      </div>
-    );
-  }
-}
-
-export default App;
+export const App = (props: PageInterface) => {
+  return (
+    <div>
+      <h1>Welcome to React with Typescript</h1>
+      <p>The color of this page is: {props.color}</p>
+    </div>
+  );
+};
